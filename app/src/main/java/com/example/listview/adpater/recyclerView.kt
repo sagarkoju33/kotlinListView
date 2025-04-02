@@ -1,9 +1,11 @@
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.listview.CityDetailActivity
 import com.example.listview.R
 import com.example.listview.model.City
 
@@ -30,6 +32,15 @@ class CityAdapter(private val cityList: List<City>) :
         holder.tvCityName.text = city.name
         holder.tvCityDescription.text = city.description
         holder.tvCityImage.setImageResource(city.image)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, CityDetailActivity::class.java).apply {
+                putExtra("city_name", city.name)
+                putExtra("city_description", city.description)
+                putExtra("city_image", city.image)
+            }
+            holder.itemView.context.startActivity(intent)
+        }
     }
+
 
 }
