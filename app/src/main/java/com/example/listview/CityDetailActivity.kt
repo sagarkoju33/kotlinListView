@@ -25,7 +25,7 @@ class CityDetailActivity : AppCompatActivity() {
         cityImage.setImageResource(imageResId)
         cityName.text = name
         cityDescription.text = description
-
+        ///aaaaaaaaaaaaaaaaaaaaaa
         // Set click listener for back arrow to return to the list
         backArrow.setOnClickListener {
             finish()  // Closes the current activity
