@@ -31,7 +31,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imageView"
                     android:layout_width="80dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="16dp"
                     android:adjustViewBounds="true"
@@ -55,8 +55,19 @@
                         android:id="@+id/tvCityDes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="16dp"
+                        android:paddingTop="30dp"
+                        android:textColor="@color/design_default_color_error" />
+
 
                 </LinearLayout>
 
@@ -66,5 +77,6 @@
 
 
     </LinearLayout>
+
 
 </LinearLayout>
