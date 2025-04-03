@@ -2,4 +2,5 @@
     <string name="app_name">listview</string>
     <string name="test">Test</string>
     <string name="price_format">Price: %s</string>
+    <string name="rating">Rating: %s</string>
 </resources>

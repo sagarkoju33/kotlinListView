@@ -19,6 +19,7 @@ class PopularAdapter(private val items: List<PopularItem>) :
         val des: TextView = view.findViewById(R.id.tvCityDes)
         val prices: TextView = view.findViewById(R.id.price)
         val thumbnail: ImageView = view.findViewById(R.id.imageView)
+        val rating: TextView = view.findViewById(R.id.starContainer)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder {
@@ -33,6 +34,9 @@ class PopularAdapter(private val items: List<PopularItem>) :
         holder.des.text = item.description
         holder.prices.text =
             holder.itemView.context.getString(R.string.price_format, item.price.toString())
+        holder.rating.text =
+            holder.itemView.context.getString(R.string.rating, item.rating.toString())
+
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, CityDetailActivity::class.java).apply {
                 putExtra("city_name", item.title)
